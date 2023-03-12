@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<!-- 10/03/2023 @Zotica Stefan Lucian-->
+<html lang="ro">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+        h1 {text-align: center;}
+    </style>
+<title>Formular</title>
+</head>
+
+<body>
+
+<h1>Formular LoL esports</h1>
+<br><br>
+
+<form title="Asta e tipluu">
+<fieldset>
+    <legend>Date personale:</legend>
+    <label for="email" >Email:</label>
+    <input type="text" id="email" name="email" size="20"><br><br>
+    <label for="username">IGN:  </label>
+    <input type="text" id="username" name="username" maxlength="16" size="21"><br><br>
+
+    <label for="quantity">Varsta:</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="27" step="2"><br><br>
+
+    <label for="server">Server:</label>
+    <select name="server" id="server" multiple>
+    <option value="EUNE" selected>EUNE</option>
+    <option value="EUW">EUW</option>
+    <option value="NA">NA</option>
+    <option value="Korea">Korea</option>
+    <option value="China">China</option>
+
+    </select>
+</fieldset><br><br>
+<div>
+<h2>Echipe preferate</h2>
+<table>
+    <tr>
+        <th>Regiune</th>
+        <th>Echipa</th>
+    </tr>
+    <tr>
+        <td>LEC</td>
+        <td><input type="text" id="lecteam" name="lecteam"></td>
+    </tr>
+    <tr>
+        <td>LCK</td>
+        <td><input type="text" id="lckteam" name="lckteam"></td>
+    </tr>
+    <tr>
+        <td>LPL</td>
+        <td><input type="text" id="lplteam" name="lplteam"></td>
+    </tr>
+</table>
+
+<h3>Momente preferate</h3>
+
+<table>
+    <tr>
+        <th>Regiune</th>
+        <th>Momente</th>
+    </tr>
+    <tr>
+        <td>LEC</td>
+        <td>
+            <table>
+                <tr>
+                    <th>Echipa</th>
+                    <th colspan="2">Moment</th>
+                </tr>
+                <tr>
+                    <td>G2</td>
+                    <td>Hans sama Samira</td>
+                    <td><input type="radio" id="lec1" name="fav_lec" value="lec1">
+                        <label for="lec1">Vote</label><br></td>
+                </tr>
+                <tr>
+                    <td>G2</td>
+                    <td>Perkz Xayah</td>
+                    <td><input type="radio" id="lec2" name="fav_lec" value="lec2">
+                        <label for="lec2">Vote</label><br></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>LCK</td>
+        <td>
+            <table>
+                <tr>
+                    <th>Echipa</th>
+                    <th colspan="2">Moment</th>
+                </tr>
+                <tr>
+                    <td>T1</td>
+                    <td>Faker gragas</td>
+                    <td><input type="radio" id="lck1" name="fav_lck" value="lck1">
+                        <label for="lck1">Vote</label><br></td>
+                </tr>
+                <tr>
+                    <td>DWN</td>
+                    <td>Showmaker on camera</td>
+                    <td><input type="radio" id="lck2" name="fav_lck" value="lck2">
+                        <label for="lck2">Vote</label><br></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</div>
+
+<p ><strong>Roluri </strong> <span style="color:rgb(199, 63, 0)">jucate</span></p>
+<ul style="list-style-type:none;">
+    <li><input type="checkbox" id="role1" name="role1" value="top">TOP</li>
+    <li><input type="checkbox" id="role2" name="role2" value="jgl">JUNGLE</li>
+    <li><input type="checkbox" id="role3" name="role3" value="mid">MID</li>
+    <li><input type="checkbox" id="role4" name="role4" value="adc" checked>ADC</li>
+    <li><input type="checkbox" id="role5" name="role5" value="supp">SUPPORT</li>
+</ul>
+
+<ol start="2019">
+    <li> G2 2019 <ul style="list-style-type:circle;">
+        <li>Wunder </li>
+        <li>Jankos</li>
+        <li>Caps</li>
+        <li>Perkz</li>
+        <li>Mikyx</li>
+    </ul></li>
+    <li>G2 2023<ul style="list-style-type:square;">
+        <li>BrokenBlade</li>
+        <li>Yike</li>
+        <li>Caps</li>
+        <li>Hans Sama</li>
+        <li>Mikyx</li>
+    </ul></li>
+</ol>
+<div>
+    <textarea id="w3review" name="w3review" rows="4" cols="50">Give some feedback!
+    </textarea><br>
+    <textarea id="w3review2" name="w3review" rows="3" cols="10" readonly  >Thank you!
+    </textarea>
+</div>
+<br><br>
+<img src="perkz-and-caps.jpg" alt="imagine" width="300" height="150">
+<br><br>
+
+<div>
+    <input type="submit" value="Submit">   
+    <input type="button" value="Cancel" disabled>
+</div>
+</form>
+
+<br><br>
+<a href="https://www.w3schools.com" target="_blank">Visit W3Schools.com!</a>
+</body>
+</html>
