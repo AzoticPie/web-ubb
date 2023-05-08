@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Problema 2</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   
+    <script>
+		$(document).ready(function() {
+			$("#myForm").submit(function(event) {
+				$(".mesaj").empty();
+				var out = ""
+				
+				var nume = $("input[name=fnume]").val();
+				var data = $("input[name=fdata]").val();
+				var varsta = $("input[name=fvarsta]").val();
+				var email = $("input[name=femail]").val();
+
+				var p = $("<p></p>");
+				p.css("color", "red");
+
+				if (nume == "" || data == "" || varsta == "" || email == "") {
+
+					var err = [];
+
+					if (nume == "") {
+						err.push("Nume");
+
+						$("input[name=nume]").css("border", "2px solid red");
+
+
+					} else {
+						$("input[name=nume]").css("border", "1px solid grey");
+					}
+
+					if (data == "") {
+						err.push("Data");
+						$("input[name=data]").css("border", "2px solid red");
+					} else {
+						$("input[name=data]").css("border", "1px solid grey");
+					}
+
+					if (varsta == "" || !isANumber(varsta) || varsta>150 || varsta<0 ) {
+						err.push("Varsta");
+						$("input[name=varsta]").css("border", "2px solid red");
+					} else {
+						$("input[name=varsta]").css("border", "1px solid grey");
+					}
+
+					if (email == "" || !/^.{1,20}@.{1,10}\..{1,5}$/.test(email)) {
+						err.push("Email");
+						$("input[name=email]").css("border", "2px solid red");
+					} else {
+						$("input[name=email]").css("border", "1px solid grey");
+					}
+			});
+		});
+
+    </script>
+</head>
+
+<body>
+
+    <div class="content">
+	<form id="myForm" action="" method="post">
+		Name: <input type="text" name="fname"><br><br>
+		Data nasterii: <input type="date" name="fdata"><br><br>
+		Varsta: <input type="text" name="fvarsta"><br><br>
+		Email: <input type="text" name="femail"><br><br>
+		<input type="submit" value="Submit">
+	</form>
+    </div>
+
+    <div class="mesaj">
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+div{
+	display: flex;
+	width:860px;
+	border:1px solid;	
+}
+
+p{
+	position: absolute;
+	margin: 0 50px;
+  	align-items: center;
+    text-indent: 100px;
+}
+
+img{
+	border:25px solid;
+	border-color: #00ffff;	
+	height: 200px;
+	width: 320px;
+}
+li{
+	
+	float: left;
+	display: flex;
+	margin: 10px;
+	align-items: flex-end;
+
+}
